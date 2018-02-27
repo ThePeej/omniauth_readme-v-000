@@ -11,4 +11,9 @@ class SessionsController < ApplicationController
 
     render 'welcome/home'  
 
+    private
+ 
+    def auth
+      request.env['omniauth.auth']
+    end
 end
